@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app= FastAPI()
 app.title="Clasificador de intenciones con llm"
 load_dotenv()
-api_key= os.getenv('API_KEY_MISTRAL')
+api_key_mistral= os.getenv('API_KEY_MISTRAL')
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -14,8 +14,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-api_key_mistral ='pAdpqFoRsVFeidPnVcPMDADAwDz4nHDj'
 client = MistralClient(api_key=api_key_mistral)
 
 tramites = [
