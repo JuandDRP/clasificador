@@ -1,0 +1,3 @@
+!pip install fastapi
+!pip install mistralai
+!pip install python-dotenv
